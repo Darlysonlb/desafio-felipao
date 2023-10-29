@@ -11,7 +11,7 @@ function saldoVitoria (vitoria, derrota){
     return saldo
 }
 
-//Solicita ao usuario o numero de Vitorias e Derrotas
+//Solicita ao usuario o número de Vitórias e Derrotas
 rl.question('Número de Vitórias: ', (vitoria) => {
     rl.question('Número de Derrotas: ', (derrota) => {
                         
@@ -34,7 +34,7 @@ rl.question('Número de Vitórias: ', (vitoria) => {
             nivel = 'Imortal';
         }
 
-        // Exibe a mensagem com o nome e o nível do herói
+        // Exibe a mensagem com o saldo de positivo de vitórias e o nivel
         console.log(`O Herói tem de saldo de ${vitoriasPositivas} está no nível de ${nivel}`);
 
        rl.close();
