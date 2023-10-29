@@ -1,6 +1,8 @@
 
+// módulo do Node.js que fornece interação.
 const readline = require('readline');
 
+// é um método que cria instância de leitura/escrita.
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -8,7 +10,7 @@ const rl = readline.createInterface({
 
 // Solicita o nome e a quantidade de experiência (XP) do herói
 rl.question('Digite o nome do herói: ', (nome) => {
-    rl.question('Digite a quantidade de experiência (XP) do herói: ', (xp) => {
+    rl.question('Digite a quantidade de experiência (XP 1.000 a 10.000) do herói: ', (xp) => {
         xp = parseInt(xp);
 
         // Utiliza estruturas de decisão para determinar o nível do herói

@@ -1,11 +1,13 @@
 
+// módulo do Node.js que fornece interação.
 const readline = require('readline');
 
+// é um método que cria instância de leitura/escrita.
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
+// função que calcula saldo de Vitórias
 function saldoVitoria (vitoria, derrota){
     let saldo = vitoria - derrota
     return saldo
@@ -13,9 +15,10 @@ function saldoVitoria (vitoria, derrota){
 
 //Solicita ao usuario o número de Vitórias e Derrotas
 rl.question('Número de Vitórias: ', (vitoria) => {
-    rl.question('Número de Derrotas: ', (derrota) => {
-                        
+    rl.question('Número de Derrotas: ', (derrota) => {             
         let vitoriasPositivas = saldoVitoria(parseInt(vitoria), parseInt(derrota));
+        
+        // Utiliza estruturas de decisão para determinar o nível do herói
         let nivel;
 
         if ( vitoriasPositivas < 10) {
@@ -35,7 +38,7 @@ rl.question('Número de Vitórias: ', (vitoria) => {
         }
 
         // Exibe a mensagem com o saldo de positivo de vitórias e o nivel
-        console.log(`O Herói tem de saldo de ${vitoriasPositivas} está no nível de ${nivel}`);
+        console.log(`O Herói acumulou ${vitoriasPositivas} vitórias e alcançou o nível de ${nivel}`);
 
        rl.close();
     })
